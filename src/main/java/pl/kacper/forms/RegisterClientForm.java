@@ -1,65 +1,22 @@
-package pl.kacper.model;
+package pl.kacper.forms;
+
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-@Entity
-@Table
-public class Client {
+public class RegisterClientForm {
 
-    @Id
-    @NotNull
-    @Column(name = "id")
-    private long id;
 
-    @NotNull
-    @Column(name = "name")
     private String name;
 
-    @NotNull
-    @Column(name = "surname")
     private String surname;
-
-    @NotNull
-    @Column(name = "car_model")
     private String carModel;
-
-    @NotNull
-    @Column(name = "license_plate")
     private String licensePlate;
-
-    @NotNull
-    @Column(name = "phone_number")
     private String phoneNumber;
-
-    @NotNull
-    @Column(name = "discount")
     private double discount;
 
-    public Client(long id, String name, String surname, String carModel, String licensePlate, String phoneNumber, double discount) {
-        this.id = id;
-        this.name = name;
-        this.surname = surname;
-        this.carModel = carModel;
-        this.licensePlate = licensePlate;
-        this.phoneNumber = phoneNumber;
-        this.discount = discount;
-    }
 
-    public Client(String name, String surname, String carModel, String licensePlate, String phoneNumber, double discount) {
 
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
